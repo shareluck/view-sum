@@ -53,6 +53,12 @@ function toPrimitive(obj,type){
 }
 ```
 
+## 深拷贝
+```js
+    
+```
+
+
 ## 创建对象的方式 
 ### 工厂模式 后面给构造函数模式替代
 - 函数内 新建对象 设置对象的 属性 和方法 返回
@@ -290,3 +296,16 @@ function toPrimitive(obj,type){
 2. 传参区别 ：
     - apply bind 是数组
     - call 是按顺序传入
+
+
+
+## 闭包
+- 指能访问其他函数作用域中的变量的函数
+```js
+    function a(){
+        let name = 'aaa'
+        return function(){
+        }
+    }
+    a()()
+```

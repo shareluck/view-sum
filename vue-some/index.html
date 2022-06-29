@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vue</title>
+</head>
+<body>
+    <div id="app">
+        <p>测试模版字符串   {{count}}  </p>
+        <p>测试模版字符串   {{msg}}  </p>
+        <h1>测试 v-html</h1>
+        <p v-html="htmlTest"></p>
+        <h1>测试 v-text</h1>
+        <p v-text="msg"></p>
+        <p v-text="count"></p>
+        <h1>测试 v-model</h1>
+
+        <input v-model="msg" />
+        <input v-model="count" />
+        <h1>测试 v-on:click</h1>
+
+        <button v-on:click="getCount">按钮</button>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

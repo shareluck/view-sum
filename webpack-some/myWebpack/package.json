@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0"
+  },
+  "name": "111",
+  "version": "1.0.0",
+  "main": "wb.js",
+  "devDependencies": {},
+  "scripts": {
+    "build":"rm -rf index.js && node wp.js > index.js",
+    "build1":"rm -rf dist.js && node wb.js > dist.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

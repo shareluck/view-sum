@@ -106,17 +106,7 @@ parseInt(str，base) 将字符串 str 解析为在给定的 base 数字系统中
 2. string
 [字符串方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#methods)
 
-3. array (增 删 改 查 拼 赋 排 转)
-- 增
-    - 后增 push
-    - 前增 unshift
-- 删
-    - splice 
-    - slice 
-
-
-
-
+3. array (增 删 改 截 查 拼 复(复制) 排 转)
 
 ## 函数 function
 

@@ -41,16 +41,35 @@
 
 
 ## 隐式转换规则
-### 引用类型的值 转换为 基础（原始）类型的值
+
+1. other to number
+    - null  --> 0 
+    - undefined   -->  NaN
+    - true false -->  1  0 
+    - string  --> 
+        - 空 字符串 "" -->  0 
+        - 纯数字 字符串 "123" -->  123
+        - 其他 字符串  "123e"  --> NaN
+    - object  --> 调用 [[Symbol.toPrimitive]] 传入 type 为 Number 先 valueOf 若没返回 原始类型 继续调用 toString 方法 
+
+2. other to string 
+    - undefined null number false true 加引号
+    - object  --> 调用 [[Symbol.toPrimitive]] 传入 type 为 String 先 toString 若没返回 原始类型 继续调用 valueOf 方法 
+
+3. other to boolean
+    - 所有的假值  null undefined +0 -0 '' NaN  --> false
+    - 其余的都是 true
+
+4. [[Symbol.toPrimitive]] 对象转原始值 
 ```js
-function toPrimitive(obj,type){
-    //obj :要转换的对象 
-    // type : 转换成什么类型
-    //type 为 String 或者 Number
-    String 先 toString 后 valueOf
-    Number 先 valueOf  后 toString
-    //可以自行修改原型上的 这 2个方法
-}
+    function toPrimitive(obj,type){
+        //obj :要转换的对象 
+        // type : 转换成什么类型
+        //type 为 String 或者 Number
+        String 先 toString 后 valueOf
+        Number 先 valueOf  后 toString
+        //可以自行修改原型上的 这 2个方法
+    }
 ```
 
 ## 深拷贝
